@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t">
+  <title id="t">RS logo</title>
+  <rect x="4" y="4" width="112" height="112" rx="22" fill="#0f6b5f"/>
+  <text x="60" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="700" fill="#cdeee6">&lt;/&gt;</text>
+  <text x="60" y="92" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">rs</text>
+</svg>

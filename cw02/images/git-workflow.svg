@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="30" y="30" width="420" height="36" rx="4" fill="#1e293b"/>
+  <circle cx="50" cy="48" r="6" fill="#ef4444"/>
+  <circle cx="70" cy="48" r="6" fill="#f59e0b"/>
+  <circle cx="90" cy="48" r="6" fill="#22c55e"/>
+  <text x="115" y="53" fill="#e2e8f0" font-family="monospace" font-size="13">git status &amp;&amp; git log --oneline</text>
+  <rect x="30" y="66" width="420" height="204" fill="#0f172a"/>
+  <text x="48" y="100" fill="#38bdf8" font-family="monospace" font-size="14">$ git init</text>
+  <text x="48" y="128" fill="#a3e635" font-family="monospace" font-size="14">$ git add index.html README.md</text>
+  <text x="48" y="156" fill="#a3e635" font-family="monospace" font-size="14">$ git commit -m "initial html files"</text>
+  <text x="48" y="184" fill="#facc15" font-family="monospace" font-size="14">$ git branch -M main</text>
+  <text x="48" y="212" fill="#c084fc" font-family="monospace" font-size="14">$ git push -u origin main</text>
+  <text x="48" y="244" fill="#94a3b8" font-family="monospace" font-size="13">Branch 'main' set up to track 'origin/main'.</text>
+</svg>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- csc 4370 cw 02 intro to html - rajan sharma - home page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rajan Sharma web portfolio for CSC 4370 Coursework 02.">
+  <title>Home - Rajan Sharma Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/rs-logo.svg" alt="RS logo icon" width="40" height="40">
+        <span>Rajan's Portfolio</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <h1>Hi, I'm Rajan Sharma</h1>
+      <p class="tagline">
+        Computer science student at Georgia State University taking CSC 4370 Web Programming.
+      </p>
+      <p>
+        <a class="btn" href="projects.html">See my projects</a>
+        <a class="btn btn-ghost" href="about.html">More about me</a>
+      </p>
+    </section>
+
+    <div class="with-sidebar">
+      <div class="main-col">
+        <section id="welcome">
+          <h2>Welcome</h2>
+          <p>
+            This is a basic 3-page portfolio I built in plain HTML for CSC 4370 Web Programming.
+            It has this home page, an about page, and a projects page. I graduate in
+            December 2026, and this site keeps track of what I build in class.
+          </p>
+          <h3>What is on this site</h3>
+          <ul>
+            <li>A short intro about me and my major</li>
+            <li>Skills I am practicing in HTML and CSS</li>
+            <li>A table comparing my class projects</li>
+            <li>Screenshots and descriptions of each project</li>
+            <li>An embedded walkthrough video</li>
+            <li>Contact links to reach me</li>
+          </ul>
+        </section>
+
+        <hr>
+
+        <section id="featured">
+          <h2>Featured work</h2>
+          <div class="card-grid">
+            <article class="card">
+              <img src="images/git-workflow.svg" alt="Terminal window showing git add, commit, and push commands" width="480" height="300">
+              <h3>CW 01: Git and GitHub workflow</h3>
+              <p>Setting up local repositories, branches, and commits for CSC 4370.</p>
+            </article>
+            <article class="card">
+              <img src="images/cw02-home.jpg" alt="Screenshot of my HTML portfolio page layout" width="960" height="600">
+              <h3>HTML5 portfolio site</h3>
+              <p>My multi-page HTML site practicing semantic tags, tables, and lists.</p>
+            </article>
+          </div>
+          <p><a href="projects.html">See all projects</a></p>
+        </section>
+
+        <hr>
+
+        <section id="video">
+          <h2>Web development overview video</h2>
+          <p>A short reference video on structuring HTML5 pages that I used while practicing for this assignment:</p>
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/salY_Sm6mv4" title="HTML5 structure overview video" allowfullscreen></iframe>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <h2>Quick links</h2>
+        <ul class="plain-list">
+          <li><a href="about.html#skills">My skills</a></li>
+          <li><a href="about.html#projects-table">Project table</a></li>
+          <li><a href="projects.html#connect">Contact me</a></li>
+          <li><a href="https://github.com/rajanshxrma" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <address>
+      Rajan Sharma<br>
+      Computer Science, Georgia State University<br>
+      <a href="mailto:rsharma30@student.gsu.edu">rsharma30@student.gsu.edu</a> -
+      <a href="https://github.com/rajanshxrma" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </address>
+    <p>&copy; 2026 Rajan Sharma - CSC 4370</p>
+  </footer>
+</body>
+</html>

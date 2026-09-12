@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="t">
+  <title id="t">Code editor drawing</title>
+  <rect width="480" height="300" rx="16" fill="#1f2328"/>
+  <circle cx="28" cy="24" r="7" fill="#e5534b"/>
+  <circle cx="50" cy="24" r="7" fill="#d4a72c"/>
+  <circle cx="72" cy="24" r="7" fill="#57ab5a"/>
+  <g font-family="Courier New, monospace" font-size="20">
+    <text x="30" y="80" fill="#8ddbc9">&lt;main&gt;</text>
+    <text x="60" y="115" fill="#8ddbc9">&lt;section</text>
+    <text x="176" y="115" fill="#f0b67f">id="about"</text>
+    <text x="290" y="115" fill="#8ddbc9">&gt;</text>
+    <text x="90" y="150" fill="#8ddbc9">&lt;h2&gt;</text>
+    <text x="146" y="150" fill="#ffffff">About me</text>
+    <text x="252" y="150" fill="#8ddbc9">&lt;/h2&gt;</text>
+    <text x="90" y="185" fill="#8ddbc9">&lt;p&gt;</text>
+    <text x="134" y="185" fill="#adbac7">...</text>
+    <text x="176" y="185" fill="#8ddbc9">&lt;/p&gt;</text>
+    <text x="60" y="220" fill="#8ddbc9">&lt;/section&gt;</text>
+    <text x="30" y="255" fill="#8ddbc9">&lt;/main&gt;</text>
+  </g>
+</svg>
