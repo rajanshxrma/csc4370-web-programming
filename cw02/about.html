@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- csc 4370 cw 02 intro to html - rajan sharma - about page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Rajan Sharma: skills, workflow, and projects table.">
+  <title>About Me - Rajan Sharma Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/rs-logo.svg" alt="RS logo icon" width="40" height="40">
+        <span>Rajan's Portfolio</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>About Me</h1>
+
+    <nav class="jump-links">
+      <p>Jump to:</p>
+      <ul>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#process">How I build a page</a></li>
+        <li><a href="#projects-table">Projects table</a></li>
+        <li><a href="#quote">Favorite quote</a></li>
+      </ul>
+    </nav>
+
+    <div class="with-sidebar">
+      <div class="main-col">
+        <section id="about-me">
+          <h2>Who I am</h2>
+          <figure class="float-figure">
+            <img src="images/code-brackets.svg" alt="Illustration of an HTML code editor window" width="480" height="300">
+            <figcaption>Working on HTML and CSS files for class.</figcaption>
+          </figure>
+          <p>
+            I'm Rajan Sharma, a computer science student at Georgia State University
+            graduating in December 2026.
+          </p>
+          <p>
+            Right now I'm taking CSC 4370 Web Programming, and this site is my Coursework 02
+            submission built with plain HTML5 and a basic stylesheet.
+          </p>
+          <p>
+            Outside of class I also build mobile and backend projects on
+            <a href="https://github.com/rajanshxrma" target="_blank" rel="noopener noreferrer">my GitHub</a>
+            and practice deploying web pages to the GSU CODD server.
+          </p>
+          <p>
+            I got into computer science because I liked figuring out how apps and websites work under
+            the hood and building things I can actually use. Outside of school I spend most of my free
+            time at the gym weight training, watching movies, and working on side coding projects.
+          </p>
+        </section>
+
+        <hr>
+
+        <section id="skills">
+          <h2>Skills I'm working on</h2>
+          <ul>
+            <li>Semantic HTML5 tags (header, main, article, section)</li>
+            <li>CSS layout with Flexbox and Grid</li>
+            <li>CSS keyframes and hover transitions</li>
+            <li>Writing valid HTML and CSS that passes W3C checks</li>
+            <li>Git and GitHub for version control</li>
+            <li>Deploying files to the GSU CODD server</li>
+          </ul>
+        </section>
+
+        <hr>
+
+        <section id="process">
+          <h2>How I build a page</h2>
+          <img class="wide-img" src="images/wireframe-sketch.svg" alt="Wireframe diagram showing header, main, aside, and footer boxes" width="480" height="300">
+          <ol>
+            <li>Sketch out the basic sections of the page</li>
+            <li>Write the HTML tags and structure first</li>
+            <li>Fill in the text, images, tables, and links</li>
+            <li>Add CSS rules and test mobile screen widths</li>
+            <li>Check the page in the <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C validator</a></li>
+            <li>Upload the files to CODD and test the live URL</li>
+          </ol>
+        </section>
+
+        <hr>
+
+        <section id="projects-table">
+          <h2>My projects so far</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>Summary of CSC 4370 projects and coursework</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Project</th>
+                  <th scope="col">Technologies used</th>
+                  <th scope="col">Pages</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Git &amp; GitHub setup (CW 01)</th>
+                  <td>Git CLI, branching, GitHub repositories</td>
+                  <td>1</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <th scope="row">This HTML portfolio (CW 02)</th>
+                  <td>Semantic HTML5, tables, lists, external CSS</td>
+                  <td>3</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <th scope="row">Coursework homepage (HW 1)</th>
+                  <td>HTML5, external CSS, responsive layout</td>
+                  <td>1</td>
+                  <td>In progress</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="2">Total pages built</th>
+                  <td colspan="2">5</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="quote">
+          <h2>Favorite quote</h2>
+          <blockquote>
+            <p>We are what we repeatedly do. Excellence, then, is not an act, but a habit.</p>
+          </blockquote>
+          <p class="quote-by">- Will Durant</p>
+        </section>
+
+        <p><a href="#about-me">Back to top</a></p>
+      </div>
+
+      <aside class="sidebar">
+        <h2>Quick facts</h2>
+        <ul class="plain-list">
+          <li>School: Georgia State University</li>
+          <li>Major: Computer Science</li>
+          <li>Graduating: December 2026</li>
+          <li>GitHub: <a href="https://github.com/rajanshxrma" target="_blank" rel="noopener noreferrer">rajanshxrma</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <address>
+      Rajan Sharma<br>
+      Computer Science, Georgia State University<br>
+      <a href="mailto:rsharma30@student.gsu.edu">rsharma30@student.gsu.edu</a> -
+      <a href="https://github.com/rajanshxrma" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </address>
+    <p>&copy; 2026 Rajan Sharma - CSC 4370</p>
+  </footer>
+</body>
+</html>
