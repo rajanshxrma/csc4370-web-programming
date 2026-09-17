@@ -1,0 +1,259 @@
+/* ============================================
+   HENRY'S JOURNAL - CSS POSITIONING EXERCISE
+   Author: Rajan Sharma
+   Date: 09/16/2026
+   Special Features Implemented:
+   1. Interactive hover transitions on 3 elements (.blue-box, .entry-image, .friends-list li)
+   2. Additional mobile breakpoint (@media max-width: 480px)
+============================================ */
+
+/* ============================================
+   STEP 1: BASE RESET & TYPOGRAPHY
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* ============================================
+   STEP 2: MAIN CONTAINER (Green Border Box)
+   ============================================ */
+
+#main-container {
+    background-color: #ffffff;
+    border: 10px solid #4CAF50;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+#main-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   STEP 3: HEADER STYLING (Red Border Box)
+   ============================================ */
+
+#header-box {
+    background-color: #E0F7FA;
+    border: 3px solid #e74c3c;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#header-box h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+#header-box .tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* ============================================
+   STEP 4: SIDEBAR POSITIONING (Friends Section)
+   ============================================ */
+
+#sidebar {
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+}
+
+.sidebar-content {
+    background-color: #78909C;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.sidebar-content h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.friends-list {
+    list-style: none;
+}
+
+.friends-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: padding-left 0.2s ease, color 0.2s ease;
+}
+
+.friends-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   STEP 5: MAIN CONTENT AREA
+   ============================================ */
+
+#content-area {
+    float: right;
+    width: 75%;
+}
+
+/* ============================================
+   STEP 6: JOURNAL ENTRIES (Blue Border Boxes)
+   ============================================ */
+
+.blue-box {
+    background-color: #E8FBFB;
+    border: 4px solid #80DEEA;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease;
+}
+
+.blue-box:first-child {
+    margin-top: 0;
+}
+
+.entry-title {
+    color: #00838F;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #80DEEA;
+    padding-bottom: 8px;
+}
+
+/* ============================================
+   STEP 7: FLOATING IMAGES
+   ============================================ */
+
+.entry-image {
+    float: right;
+    max-width: 200px;
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+/* ============================================
+   STEP 8: CLEARING FLOATS (CLEARFIX)
+   ============================================ */
+
+.entry-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ============================================
+   STEP 9: FOOTER POSITIONING
+   ============================================ */
+
+#footer {
+    clear: both;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+    text-align: center;
+}
+
+.validation-badge {
+    width: 80px;
+    height: auto;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.validation-badge:hover {
+    opacity: 1;
+}
+
+/* ============================================
+   STEP 10: RESPONSIVE DESIGN
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    #sidebar {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    #content-area {
+        float: none;
+        width: 100%;
+    }
+
+    .entry-image {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+
+    #header-box h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* ============================================
+   SPECIAL FEATURES (2 Selected):
+   Feature 1: Hover transitions on 3 elements
+   Feature 2: Extra small screen breakpoint (480px)
+============================================ */
+
+.blue-box:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.entry-image:hover {
+    transform: scale(1.03);
+}
+
+.friends-list li:hover {
+    padding-left: 6px;
+    color: #E0F7FA;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    #main-container {
+        padding: 12px;
+        border-width: 6px;
+    }
+
+    #header-box {
+        text-align: center;
+    }
+
+    #header-box h1 {
+        font-size: 1.4em;
+    }
+}
