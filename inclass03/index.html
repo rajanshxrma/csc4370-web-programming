@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In-class 03: CSS Design - Rajan Sharma</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <header class="page-head">
+    <div class="wrap">
+      <h1>in-class 03: css design</h1>
+      <p>rajan sharma - csc 4370 web programming</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="challenge-grid">
+      <article class="challenge">
+        <span class="tag">animation</span>
+        <h2>challenge 1: animating the answer</h2>
+        <p>uses keyframes moveFraction so #answer starts yellow at translate(-355px, 60px), moves to (0px, 60px) at 50%, and ends red at (0px, 0px) next to the equals sign after a 1s delay. also adds a hover style on #question.</p>
+        <a class="open-link" href="challenge1.html">open challenge 1</a>
+      </article>
+
+      <article class="challenge">
+        <span class="tag">z-index</span>
+        <h2>challenge 2: i &hearts; ny t-shirt</h2>
+        <p>moves the shirt image 10px right with position: relative, puts the i, heart, and ny spans on top using position: absolute and z-index, and adds a border, padding, margin, and box-shadow around the shirt.</p>
+        <a class="open-link" href="challenge2.html">open challenge 2</a>
+      </article>
+    </div>
+
+    <section>
+      <h2>critical thinking questions</h2>
+
+      <div class="answer">
+        <h3>1. positioning context</h3>
+        <p>when an element uses position: absolute, its top and left numbers are measured from the closest parent element that has a position other than static. because the outer div has position: relative, the .first, .heart, and .last spans stay positioned inside that div.</p>
+        <p>if you delete position: relative from the div, there is no positioned parent anymore so the spans position themselves relative to the whole page window instead. then if the shirt moves down the page, the letters stay stuck up near the top corner instead of sitting on the shirt.</p>
+      </div>
+
+      <div class="answer">
+        <h3>2. layering logic</h3>
+        <p>z-index only works on elements that have a position like relative, absolute, or fixed. if an element is still position: static, the browser ignores z-index on it and just draws it in normal order.</p>
+        <p>in challenge 2 the shirt image has position: relative and z-index: 1, and the text spans have position: absolute and z-index: 2. if you change the spans to static or give the shirt a bigger z-index than the spans, the white shirt image covers up the letters so you cant see them.</p>
+      </div>
+
+      <div class="answer">
+        <h3>3. animation performance</h3>
+        <p>animating with transform: translate() is smoother than animating left and top because translate just moves the element visually without making the browser recalculate the page layout on every frame.</p>
+        <p>when you animate left and top, the browser has to redo layout calculations each frame. on one small word on a laptop it looks almost the same, but if you animate a bunch of items or run it on a slower phone, left and top can look choppy compared to transform.</p>
+      </div>
+
+      <div class="answer">
+        <h3>4. design transfer</h3>
+        <p>if i swapped the t-shirt for a hoodie picture, i would just need to change the top and left pixel numbers on .first, .heart, and .last because the chest area on a hoodie is lower down under the hood strings and the image size might be different.</p>
+        <p>the rest of the css setup stays the same though: a position: relative wrapper div, position: absolute on the text spans, and z-index so the text stays on top of the picture.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>rajan sharma - csc 4370 web programming - in-class 03</p>
+  </footer>
+</body>
+</html>

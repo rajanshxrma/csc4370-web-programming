@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>I Love NY T-Shirt</title>
+      <!-- in-class 03, challenge 2: i heart ny t-shirt. rajan sharma -->
+      <style>
+
+         img {
+            /* 10px to the right of where it would normally sit */
+            position: relative;
+            left: 10px;
+            z-index: 1;
+
+            /* frame */
+            border: 3px solid black;
+            padding: 16px;
+            margin: 14px;
+            background-color: #e6e9ee;
+            box-shadow: 8px 10px 18px rgba(0, 0, 0, 0.35);
+         }
+
+         /* the div wraps the shirt and the text, so it is the anchor for the absolute spans */
+         div {
+            position: relative;
+            display: inline-block;
+            background-color: #cfe0f2;
+         }
+
+         .words {
+            font-family: impact;
+            font-size: 60px;
+         }
+
+         .first {
+            position: absolute;
+            top: 119px;
+            left: 164px;
+            z-index: 2;
+         }
+
+         .heart {
+            color: red;
+            font-size: 80px;
+            position: absolute;
+            top: 104px;
+            left: 180px;
+            z-index: 2;
+         }
+
+         .last {
+            position: absolute;
+            top: 184px;
+            left: 164px;
+            z-index: 2;
+         }
+
+      </style>
+   </head>
+   <body>
+      <div>
+         <span class="first words">I</span>
+
+         <span class="heart">&hearts;</span>
+
+         <span class="last words">NY</span>
+
+         <img src="tshirt.svg" alt="White t-shirt">
+      </div>
+   </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Question and Answer</title>
+      <!-- in-class 03, challenge 1: animating the answer. rajan sharma -->
+      <style>
+
+         body {
+            font-family: Calibri, sans-serif;
+            font-size: 3em;
+         }
+
+         #answer {
+            color: black;
+            width: 100px;
+
+            /* waits 1s after the css loads, then runs moveFraction once and stays at the end */
+            animation-name: moveFraction;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+         }
+
+         /* starts off to the left and low, slides right, then rises next to the = sign */
+         @keyframes moveFraction {
+            0% {
+               color: yellow;
+               transform: translate(-355px, 60px);
+            }
+            50% {
+               transform: translate(0px, 60px);
+            }
+            100% {
+               color: red;
+               transform: translate(0px, 0px);
+            }
+         }
+
+         #question {
+            padding: 0 0.15em;
+            border-radius: 0.2em;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+         }
+
+         #question:hover {
+            /* hover turns the question into a highlighted note */
+            background-color: #fff4c2;
+            color: #1f4e8c;
+            box-shadow: 0 0.08em 0 #1f4e8c;
+            cursor: help;
+         }
+
+         span {
+            display: inline-block;
+         }
+
+      </style>
+   </head>
+   <body>
+      <span id="question">Question: &frac14; + &frac12; =</span>
+      <span id="answer">&frac34;</span>
+   </body>
+</html>
