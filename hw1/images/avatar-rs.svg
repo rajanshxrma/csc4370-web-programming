@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="t">
+  <title id="t">RS initials avatar</title>
+  <rect width="200" height="200" rx="100" fill="#2348b8"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#f6f4ef" stroke-width="4" stroke-dasharray="6 10"/>
+  <text x="100" y="124" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#f6f4ef">RS</text>
+</svg>

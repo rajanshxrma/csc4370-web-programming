@@ -1,0 +1,292 @@
+/* csc 4370 hw1 - personal homepage styles - rajan sharma */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f4ef;
+  color: #1b2230;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #2348b8;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.topbar {
+  background-color: #1b2230;
+}
+
+.topbar-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.brand {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.nav-list a:hover {
+  background-color: #2348b8;
+}
+
+.layout {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.profile {
+  background-color: #ffffff;
+  border: 1px solid #dcd8cf;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.avatar {
+  width: 130px;
+  border-radius: 50%;
+}
+
+.profile h1 {
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.tagline {
+  color: #555e70;
+  margin: 0 0 16px;
+}
+
+.facts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #dcd8cf;
+}
+
+.fact-label {
+  color: #555e70;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #2348b8;
+  border: 1px solid #2348b8;
+  color: #ffffff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #1b2230;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #2348b8;
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+}
+
+.content {
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #dcd8cf;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.panel h2 {
+  font-size: 22px;
+}
+
+.panel p {
+  margin: 0 0 12px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.course-group {
+  border: 1px solid #dcd8cf;
+  border-radius: 6px;
+  padding: 14px;
+}
+
+.work-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #dcd8cf;
+}
+
+.chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #2348b8;
+  color: #ffffff;
+}
+
+.chip-here {
+  background-color: #1b2230;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.project-card img {
+  border-radius: 6px;
+  border: 1px solid #dcd8cf;
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+}
+
+.tag-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.tag-list li {
+  margin-bottom: 6px;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid #dcd8cf;
+}
+
+.contact-list .fact-label {
+  width: 80px;
+}
+
+.footer {
+  text-align: center;
+  color: #555e70;
+  font-size: 14px;
+  padding: 20px;
+  border-top: 1px solid #dcd8cf;
+}
+
+.validators a {
+  margin: 0 8px;
+}
+
+@media (min-width: 700px) {
+  .course-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .course-group-wide {
+    grid-column: 1 / -1;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+  }
+}
