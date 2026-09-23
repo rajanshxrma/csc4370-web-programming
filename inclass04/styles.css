@@ -1,0 +1,159 @@
+/* Add your styles here */
+
+header {
+   display: flex;
+   justify-content: space-between;
+}
+
+.content {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.main-content {
+   display: flex;
+   flex-wrap: wrap;
+   flex-grow: 1;
+   flex-basis: 70%;
+}
+
+.title {
+   display: flex;
+   align-items: baseline;
+   flex-wrap: wrap;
+}
+
+.summary {
+   display: flex;
+   justify-content: space-evenly;
+   flex-grow: 1;
+   flex-basis: 100%;
+   flex-wrap: wrap;
+}
+
+.summary > div > div {
+   display: flex;
+   justify-content: space-between;
+}
+
+.ingredients,
+.directions {
+   flex-grow: 1;
+   flex-basis: 45%;
+}
+
+.related-content {
+   flex-grow: 1;
+   flex-basis: 20%;
+}
+
+.summary img {
+   box-shadow: 5px 5px 10px #888;
+   border-radius: 5px;
+   max-width: 100%;
+   height: auto;
+}
+
+/* Given CSS rules below */
+body {
+   margin: 0;
+   font-family: Helvetica, sans-serif;
+}
+
+header {
+   border-bottom: 2px solid #93B5C6;
+   background-color: #DDEDAA;
+   padding: 8px;
+}
+
+.logo {
+   color: #BD4F6C;
+   font-size: 18px;
+}
+
+.content {
+   margin-left: 30px;
+}
+
+.title {
+   border-bottom: 1px dashed #93B5C6;
+}
+
+.title h1 {
+   color: #BD4F6C;
+   text-align: left;
+}
+
+.title p {
+   color: #93B5C6;
+   margin-left: 30px;
+}
+
+.summary {
+   margin-top: 30px;
+}
+
+.summary > div {
+   background-color: #DDEDAA;
+   border: 2px solid #93B5C6;
+   border-radius: 5px;
+   color: #BD4F6C;
+   padding: 5px;
+   width: 210px;
+}
+
+.related-content {
+   margin-left: 100px;
+}
+
+/* Part 2: Tic-Tac-Toe Grid rules */
+h1 {
+   text-align: center;
+}
+
+.x {
+   color: red;
+}
+
+.o {
+   color: blue;
+}
+
+#board {
+   font: 85px arial, sans-serif;
+   margin: 3px;
+   display: grid;
+   grid-template-columns: 100px 100px 100px;
+   grid-template-rows: 100px 100px 100px;
+   grid-gap: 10px;
+   justify-content: center;
+}
+
+#board > div {
+   border: 1px solid LightSkyBlue;
+   background-color: #f7fbff;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#board > div:hover {
+   background-color: #e1f2fe;
+}
+
+@media (max-width: 600px) {
+   .content {
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+   .title p {
+      margin-left: 0;
+   }
+   .ingredients,
+   .directions,
+   .related-content {
+      flex-basis: 100%;
+      margin-left: 0;
+   }
+}

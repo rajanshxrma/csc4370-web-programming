@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>In-Class 04 - Grid and Flexbox - Rajan Sharma</title>
+   <style>
+      body {
+         font-family: Arial, Helvetica, sans-serif;
+         max-width: 760px;
+         margin: 20px auto;
+         padding: 0 15px;
+         line-height: 1.5;
+         color: #222;
+      }
+      h1, h2 {
+         color: #111;
+      }
+      .box {
+         border: 1px solid #ccc;
+         padding: 12px 16px;
+         margin-bottom: 16px;
+         background: #fafafa;
+      }
+   </style>
+</head>
+<body>
+   <h1>in-class 04: grid and flexbox</h1>
+   <p>rajan sharma - csc 4370</p>
+
+   <div class="box">
+      <h2>lab files</h2>
+      <ul>
+         <li><a href="oatmeal_cookies.html">part 1: recipe with flexbox (oatmeal_cookies.html)</a></li>
+         <li><a href="tic-tac-toe.html">part 2: tic-tac-toe with grid (tic-tac-toe.html)</a></li>
+         <li><a href="styles.css">stylesheet (styles.css)</a></li>
+      </ul>
+   </div>
+
+   <div class="box">
+      <h2>critical thinking questions</h2>
+
+      <h3>question 1 (320px recipe viewport)</h3>
+      <p>
+         at 320px width, the .main-content container should use display: flex with flex-direction: row and flex-wrap: wrap so that .ingredients and .directions can wrap onto their own full rows instead of trying to stay next to each other at 45% width.
+      </p>
+      <p>
+         in the starter page the widest things inside .ingredients and .summary are the cookie picture (250px wide) and the summary box (210px wide), plus the long ingredient lines like 3 cups quick-cooking or old-fashioned oats. also .content had margin-left: 30px and .related-content had margin-left: 100px. if .ingredients and .directions stay side by side on a 320px phone screen, each column only gets about 130px so the text and the 210px box get pushed off the right side of the screen.
+      </p>
+      <p>
+         using flex-wrap: wrap and setting flex-basis: 100% on small screens lets each section take the full width at 320px so there is no sideways scrolling. on wider desktop screens, flex-basis: 45% and flex-grow: 1 put .ingredients and .directions back side by side. the main tradeoff on really wide screens is that flex-grow: 1 stretches both columns to fill the whole row with no gap in the middle unless you add margin or gap, and the lines in directions can get pretty long to read.
+      </p>
+
+      <h3>question 2 (tic-tac-toe square overflow)</h3>
+      <p>
+         if one square in #board has a really long label and stretches wider than 100px, the problem is inside the grid item (#board > div) and not the grid-template-columns: 100px 100px 100px rule on #board. the track is set to 100px, but grid items have min-width: auto and overflow: visible by default, and since the font size is 85px a long word cannot fit inside 100px and spills right out of the box.
+      </p>
+      <p>
+         when you inspect #board > div in chrome devtools you can see the square box is 100x100 but the big 85px text goes past the right border. without touching the html, the easiest css fix on #board > div is adding min-width: 0 and overflow: hidden (or smaller font-size if it is a whole word).
+      </p>
+      <p>
+         that keeps the 3x3 board centered and all squares the same 100px size because #board still has three 100px columns and justify-content: center, and overflow: hidden stops the long text from spilling outside its square.
+      </p>
+
+      <h3>devtools notes</h3>
+      <p>
+         checked both pages in chrome devtools device toolbar at 320px, 768px, and 1280px. on oatmeal_cookies.html at 320px, taking off the 100px left margin on .related-content and letting the flex boxes wrap stopped the page from scrolling sideways. on tic-tac-toe.html, checked the grid overlay in devtools to make sure #board stayed 3 columns by 3 rows at 100px each with a 10px gap in the center.
+      </p>
+   </div>
+</body>
+</html>
