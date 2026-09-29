@@ -1,0 +1,227 @@
+/* exercise 5: school timetable stylesheet - rajan sharma */
+
+:root {
+  --primary-color: #14324f;
+  --secondary-color: #2f6fae;
+  --bg-color: #f6f4ef;
+  --text-color: #1b2a3a;
+  --border-color: #d9d4c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: #c9d8e8;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  padding: 10px 16px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+nav a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #14324f;
+}
+
+main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 20px;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin: 0 0 12px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.timetable caption {
+  text-align: left;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding-bottom: 8px;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.timetable thead th {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.timetable tbody th {
+  background-color: #e7edf4;
+  color: var(--primary-color);
+}
+
+.kind {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lecture {
+  background-color: #e8f1fb;
+  color: #1d5a96;
+  border-left: 4px solid #1d5a96;
+}
+
+.lab {
+  background-color: #e9f7ef;
+  color: #17663d;
+  border-left: 4px dashed #17663d;
+}
+
+.studio {
+  background-color: #fff4e0;
+  color: #8a4b00;
+  border-left: 4px dotted #8a4b00;
+}
+
+.office {
+  background-color: #f3ecfa;
+  color: #6a2f8a;
+  border-left: 4px double #6a2f8a;
+}
+
+.quiz {
+  background-color: #fdecec;
+  color: #a8231a;
+  border-left: 5px solid #a8231a;
+  font-weight: bold;
+}
+
+.lunch {
+  background-color: #f1f2f3;
+  color: #4f5761;
+  font-style: italic;
+}
+
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swatch {
+  width: 28px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.notes article {
+  background-color: var(--bg-color);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.notes h3 {
+  margin: 0 0 6px;
+  color: var(--secondary-color);
+}
+
+.notes p {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  color: #5b6573;
+  font-size: 14px;
+  padding: 10px 16px 24px;
+}
+
+@media (max-width: 989px) {
+  .timetable th,
+  .timetable td {
+    white-space: normal;
+  }
+  .notes {
+    grid-template-columns: 1fr;
+  }
+}

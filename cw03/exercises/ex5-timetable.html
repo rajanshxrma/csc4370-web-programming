@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Five Points Coding School - Weekly Timetable</title>
+  <link rel="stylesheet" href="../css/timetable.css">
+</head>
+<body>
+  <header>
+    <h1>Five Points Coding School</h1>
+    <p>Web Studio cohort - weekly timetable</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#timetable" class="active">Timetable</a></li>
+      <li><a href="#legend">Legend</a></li>
+      <li><a href="#about">About the week</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="timetable">
+      <h2>Weekly Timetable</h2>
+      <p>Classes run Monday to Friday in Room 210. Each block shows its type (Lecture, Lab, Studio, Office hours, Quiz, or Break) and matching color from the legend below.</p>
+      <div class="table-scroll">
+        <table class="timetable">
+          <caption>Web Studio, fall term</caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Monday</th>
+              <th scope="col">Tuesday</th>
+              <th scope="col">Wednesday</th>
+              <th scope="col">Thursday</th>
+              <th scope="col">Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9:00 AM</th>
+              <td class="lecture"><span class="kind">Lecture</span> HTML Structure</td>
+              <td class="lab"><span class="kind">Lab</span> Forms</td>
+              <td class="lecture"><span class="kind">Lecture</span> CSS Cascade</td>
+              <td class="lab"><span class="kind">Lab</span> Box Model</td>
+              <td class="quiz"><span class="kind">Quiz</span> HTML Basics</td>
+            </tr>
+            <tr>
+              <th scope="row">10:30 AM</th>
+              <td class="lab"><span class="kind">Lab</span> Semantic Tags</td>
+              <td class="lecture"><span class="kind">Lecture</span> Selectors</td>
+              <td class="studio"><span class="kind">Studio</span> Design Critique</td>
+              <td class="lecture"><span class="kind">Lecture</span> Flexbox</td>
+              <td class="studio"><span class="kind">Studio</span> Portfolio Review</td>
+            </tr>
+            <tr>
+              <th scope="row">12:00 PM</th>
+              <td class="lunch" colspan="5"><span class="kind">Break</span> Lunch</td>
+            </tr>
+            <tr>
+              <th scope="row">1:00 PM</th>
+              <td class="office"><span class="kind">Office hours</span> Drop-in Help</td>
+              <td class="studio"><span class="kind">Studio</span> Layout Sketching</td>
+              <td class="lab"><span class="kind">Lab</span> Grid</td>
+              <td class="office"><span class="kind">Office hours</span> Drop-in Help</td>
+              <td class="lab"><span class="kind">Lab</span> Page Styling</td>
+            </tr>
+            <tr>
+              <th scope="row">2:30 PM</th>
+              <td class="lecture"><span class="kind">Lecture</span> Responsive Design</td>
+              <td class="quiz"><span class="kind">Quiz</span> Selectors</td>
+              <td class="office"><span class="kind">Office hours</span> Drop-in Help</td>
+              <td class="studio"><span class="kind">Studio</span> Pair Lab</td>
+              <td class="lecture"><span class="kind">Lecture</span> Week Wrap-up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="legend">
+      <h2>Legend</h2>
+      <ul class="legend">
+        <li><span class="swatch lecture"></span> Lecture</li>
+        <li><span class="swatch lab"></span> Lab</li>
+        <li><span class="swatch studio"></span> Studio</li>
+        <li><span class="swatch office"></span> Office hours</li>
+        <li><span class="swatch quiz"></span> Quiz</li>
+        <li><span class="swatch lunch"></span> Break</li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About the Week</h2>
+      <div class="notes">
+        <article>
+          <h3>Mornings</h3>
+          <p>Lectures and labs run in the morning so we can practice new HTML and CSS topics right away.</p>
+        </article>
+        <article>
+          <h3>Afternoons</h3>
+          <p>Studio and office hours are for working on assignments and asking questions.</p>
+        </article>
+        <article>
+          <h3>Fridays</h3>
+          <p>Friday has a short quiz and a review of what we built during the week.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Questions about the schedule go to Room 101, open 8:30 AM to 4:30 PM.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Five Points Coding School - Exercise 5 for CW 03 by Rajan Sharma</p>
+  </footer>
+</body>
+</html>

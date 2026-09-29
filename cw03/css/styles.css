@@ -1,0 +1,7 @@
+/* exercise 1: external stylesheet that turns all body text dark red */
+body {
+  color: darkred;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  margin: 24px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 2: Corrected CSS</title>
+  <style>
+/* fix 1: dark red passes contrast on ivory, and the line ends with a semicolon */
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: justify;
+  background: ivory;
+  color: #8b0000;
+}
+/* fix 2: each heading level gets its own size and a color that is not the body red */
+h1, h2, h3 {
+  color: #1f3a5f;
+  margin: 20px 0;
+}
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+/* fix 3: semicolon added so the next declaration cannot swallow box-sizing */
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+a {
+  color: #0000FF;
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+  <h1>Heading level 1</h1>
+  <h2>Heading level 2</h2>
+  <h3>Heading level 3</h3>
+  <p>This is body text on the ivory background. It is set in the body rule, so it uses the body color.</p>
+  <div class="container">
+    <p>This paragraph sits in the .container div, which should be exactly as wide as the body content area.</p>
+    <p><a href="ex2-original.html">Open the original version</a></p>
+  </div>
+</body>
+</html>

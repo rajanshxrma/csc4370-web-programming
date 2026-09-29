@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CW-03: CSS Exercises - Rajan Sharma</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 780px;
+      margin: 24px auto;
+      padding: 0 16px;
+      line-height: 1.5;
+      color: #222;
+      background-color: #fafafa;
+    }
+    header {
+      border-bottom: 2px solid #0039A6;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #0039A6;
+      margin-bottom: 4px;
+    }
+    .meta {
+      color: #555;
+      font-size: 14px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+    .card a {
+      color: #0039A6;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>cw-03: css exercises</h1>
+    <p class="meta">rajan sharma - csc 4370 web programming - fall 2026</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>exercise 1: external style sheet</h2>
+      <p>links an external stylesheet (css/styles.css) to style the page with dark-red body text.</p>
+      <a href="exercises/ex1.html">open exercise 1</a>
+    </div>
+
+    <div class="card">
+      <h2>exercise 2: css debugging and syntax fixes</h2>
+      <p>shows the 3 css mistakes in the given code and the fixed version.</p>
+      <p><a href="exercises/ex2-original.html">open original</a> | <a href="exercises/ex2-corrected.html">open corrected</a></p>
+    </div>
+
+    <div class="card">
+      <h2>exercise 3: embedded stylesheet (song lyrics)</h2>
+      <p>song lyrics styled using an internal style block in the head with the required classes (.artist, .song-title, .album, .year, .verse, .chorus).</p>
+      <a href="exercises/ex3-lyrics-embedded.html">open exercise 3</a>
+    </div>
+
+    <div class="card">
+      <h2>exercise 4: external stylesheet (song lyrics)</h2>
+      <p>moves the song lyrics css rules into an external stylesheet (css/lyrics.css).</p>
+      <a href="exercises/ex4-lyrics-external.html">open exercise 4</a>
+    </div>
+
+    <div class="card">
+      <h2>exercise 5: school timetable</h2>
+      <p>weekly class timetable page styled with css/timetable.css.</p>
+      <a href="exercises/ex5-timetable.html">open exercise 5 (timetable)</a>
+    </div>
+
+    <div class="card">
+      <h2>critical thinking notes</h2>
+      <p>1. specificity: when the same element matches a tag selector like p, a class selector like .verse, and an id selector like #chorus1, the id selector always wins even if it is written first in the css file because id is more specific than class and tag selectors.</p>
+      <p>2. 420px box without width 420px: if box-sizing is content-box, setting max-width: 380px and padding: 0 20px makes the total box width 420px in the devtools box model (380 + 20 + 20 = 420), or you can use flex-basis: 420px inside a flex container.</p>
+      <p>3. timetable mobile breakpoint: under 990px screen width, having white-space: nowrap on the table cells made the 5-day schedule wider than the screen. adding a media query at max-width: 989px with white-space: normal lets the text wrap inside the cells so it fits better.</p>
+      <p>4. color contrast: checked the timetable colors in chrome devtools color picker and used darker text colors on the light cell backgrounds so the schedule is easy to read.</p>
+    </div>
+  </main>
+
+</body>
+</html>
