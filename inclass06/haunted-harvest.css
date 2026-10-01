@@ -1,0 +1,311 @@
+/* Halloween Color Palette & Variables */
+:root {
+  --pumpkin: #ff7518;
+  --candy-purple: #5a189a;
+  --spider-black: #1a1423;
+  --slime-green: #8ac926;
+  --ghost-white: #f6f2f8;
+  --candle-glow: #ffd60a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--spider-black);
+  color: var(--ghost-white);
+  line-height: 1.5;
+  padding: 20px;
+}
+
+header {
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  padding: 16px;
+  background-color: #271c35;
+  border: 2px solid var(--pumpkin);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+header h1 {
+  color: var(--pumpkin);
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: var(--candy-purple);
+  color: var(--ghost-white);
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--pumpkin);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--pumpkin);
+  color: var(--spider-black);
+  transform: translateY(-2px);
+  outline: 2px solid var(--candle-glow);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CSS-only scene switching; wrap scenes in .scenes */
+.scene {
+  display: none;
+  background-color: #231930;
+  border: 2px solid var(--candy-purple);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.scenes:not(:has(.scene:target)) .scene:first-child {
+  display: block;
+}
+
+.scene:target {
+  display: block;
+}
+
+.scene-stage {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(to bottom, #120d1a 0%, #2d1b4e 70%, #1f2f16 70%, #141f0e 100%);
+  border: 2px solid var(--pumpkin);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+/* Weather: Moon & Fog */
+.moon {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: var(--candle-glow);
+  box-shadow: 0 0 20px var(--candle-glow);
+}
+
+.fog {
+  position: absolute;
+  bottom: 75px;
+  left: -100px;
+  width: 320px;
+  height: 36px;
+  background: rgba(246, 242, 248, 0.18);
+  border-radius: 20px;
+  animation: driftFog 9s ease-in-out infinite alternate;
+}
+
+.cloud {
+  position: absolute;
+  top: 38px;
+  left: 40px;
+  padding: 6px 18px;
+  background: rgba(246, 242, 248, 0.2);
+  border-radius: 20px;
+  animation: driftFog 7s linear infinite alternate;
+}
+
+/* Moving vehicles / objects */
+.broom-witch {
+  position: absolute;
+  top: 55px;
+  left: -80px;
+  font-size: 2rem;
+  animation: flyAcross 8s linear infinite;
+}
+
+.wagon {
+  position: absolute;
+  bottom: 35px;
+  left: 20px;
+  font-size: 2rem;
+  animation: rollWagon 6s ease-in-out infinite alternate;
+}
+
+/* People & Animals */
+.walker {
+  position: absolute;
+  bottom: 30px;
+  left: 140px;
+  font-size: 2rem;
+  animation: walkSteps 3s ease-in-out infinite alternate;
+}
+
+.bat {
+  position: absolute;
+  top: 80px;
+  left: 260px;
+  font-size: 1.8rem;
+  animation: flapWings 1.6s ease-in-out infinite alternate;
+}
+
+.cat {
+  position: absolute;
+  bottom: 30px;
+  right: 90px;
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.cat:hover {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.pumpkin-lantern {
+  position: absolute;
+  bottom: 28px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  animation: flicker 2s ease-in-out infinite;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.info-card {
+  background-color: var(--spider-black);
+  border: 1px solid var(--slime-green);
+  border-radius: 6px;
+  padding: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.info-card:hover,
+.info-card:focus-within {
+  transform: translateY(-3px);
+  border-color: var(--candle-glow);
+}
+
+.info-card h3 {
+  color: var(--slime-green);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+footer {
+  max-width: 900px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid var(--candy-purple);
+}
+
+footer a {
+  color: var(--candle-glow);
+}
+
+/* Keyframe Animations */
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px var(--pumpkin));
+  }
+  50% {
+    opacity: 0.75;
+    filter: drop-shadow(0 0 4px var(--candle-glow));
+  }
+}
+
+@keyframes driftFog {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(220px);
+  }
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(420px) translateY(-18px);
+  }
+  100% {
+    transform: translateX(880px) translateY(5px);
+  }
+}
+
+@keyframes walkSteps {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(70px) translateY(-6px);
+  }
+  100% {
+    transform: translateX(140px) translateY(0);
+  }
+}
+
+@keyframes flapWings {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-16px) scale(1.12);
+  }
+}
+
+@keyframes rollWagon {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(180px);
+  }
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
