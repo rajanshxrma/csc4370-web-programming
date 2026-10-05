@@ -1,0 +1,4 @@
+Name: Rajan Sharma
+Live URL: https://codd.cs.gsu.edu/~rsharma30/web/hw2/index.html
+GitHub: https://github.com/rajanshxrma/web-hw2
+Notes: Late submission for Homework 2. HTML and CSS pass the W3C validators. Validator results and my answers to the critical thinking questions (screenshots and measurements) are in the evidence folder of the GitHub repo.

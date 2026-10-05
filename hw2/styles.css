@@ -1,0 +1,173 @@
+/*
+	Name: Rajan Sharma
+	Section: CSC 4370 Web Programming
+	Assignment: Homework 2 - My Movie Review
+	File: styles.css
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("images/background.png");
+	font: 8pt Verdana, Tahoma, sans-serif;
+}
+
+#banner {
+	overflow: hidden;
+	background: url("images/bannerbackground.png") repeat-x;
+}
+
+#banner img {
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font: bold 24pt Tahoma, Verdana, sans-serif;
+}
+
+#content {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 250px;
+	grid-template-areas:
+		"main overview"
+		"counter counter";
+	max-width: 800px;
+	margin: 0 auto;
+	border: 4px solid gray;
+}
+
+#main {
+	grid-area: main;
+}
+
+#overview {
+	grid-area: overview;
+	background-color: #A2B964;
+	font-family: Arial, sans-serif;
+}
+
+#counter {
+	grid-area: counter;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+	background-color: #A2B964;
+}
+
+#rating {
+	background: #385428 url("images/rottenbackground.png") repeat-x;
+	color: white;
+}
+
+#rating img {
+	vertical-align: bottom;
+}
+
+#rating .score {
+	color: red;
+	font-size: 48pt;
+	font-weight: bold;
+}
+
+#reviews {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.column {
+	width: 47%;
+	margin-left: 2%;
+}
+
+.quote {
+	overflow: hidden;
+	padding: 8px;
+	border: 2px solid gray;
+	background-color: #E1D697;
+	font-weight: bold;
+}
+
+.quote img {
+	float: left;
+	margin-right: 5px;
+}
+
+.critic {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px;
+	margin: 0 0 35px 5px;
+}
+
+.critic p {
+	margin: 0;
+}
+
+.critic cite {
+	display: block;
+}
+
+#overview h2 {
+	margin: 0;
+}
+
+#overview h2 img {
+	display: block;
+}
+
+#overview dl {
+	margin: 0;
+	padding: 10px;
+}
+
+#overview dt {
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+#validators {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+#validators img {
+	display: block;
+}
+
+@media (max-width: 700px) {
+	#content {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas:
+			"main"
+			"counter"
+			"overview";
+		margin: 0 8px 70px;
+	}
+
+	#overview {
+		display: grid;
+		grid-template-columns: 250px minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.column {
+		width: 96%;
+	}
+
+	#overview {
+		display: block;
+	}
+
+	#overview h2 img {
+		margin: 0 auto;
+	}
+}
