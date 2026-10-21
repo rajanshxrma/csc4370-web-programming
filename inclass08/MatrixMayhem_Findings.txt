@@ -1,0 +1,41 @@
+PHP MATRIX MAYHEM - WORKSHOP FINDINGS
+Generated: 2026-10-21T20:08:14.312Z
+Student name: rajan sharma
+Course: csc 4370
+Due: October 21, 2026, 4:15 p.m. EDT (UTC-04:00)
+
+INDEX BLITZ
+Latest checked answers: b, b, b, b | 4/4 correct | 20/20
+Zero-based indexing explanation: php arrays start counting indices at 0, so row 0 is the first row and row 1 is the second row. that is why $matrix[1][2] grabs the second row and third column.
+
+BUG DIAGNOSES AND CORRECTED CODE
+Bug 1: echo $matrix[3][3] fails with an undefined array key because a 3x3 array only has indices 0, 1, and 2. to get the center value 5 the fix is echo $matrix[1][1];
+Bug 2: $matrix[2] = 11 overwrites the whole third row array with a single integer 11, which breaks any nested loop later. the fix is $matrix[2][] = 11; so it appends 11 to the end of row 2.
+Bug 3: using $i <= count($matrix[0]) loops one time too many and tries to read index 3 which does not exist. the fix is for ($i = 0; $i < count($matrix[0]); $i++) { echo $matrix[0][$i] . " "; }
+Bug 4: the inner loop used count($matrix) which is 4 (the number of rows), but rows 0 and 1 only have 3 items. the fix is nested foreach: foreach ($matrix as $row) { foreach ($row as $cell) { echo $cell . " "; } }
+
+SELF-REPORTED CHECKPOINTS
+[x] I tested the repair and explained the indexing error.
+[x] I tested the repair and preserved the third row.
+[x] I tested the repair with no undefined-key warning.
+[x] I tested all four rows without padding the data.
+[x] My PHP page creates and preserves the original three rows.
+[x] I ran PHP and verified all three coordinate outputs.
+[x] Only the two specified cells changed; the original snapshot is unchanged.
+[x] I appended a cell and a row without overwriting existing data.
+[x] My page reports 4 rows, lengths 3/3/4/4, and exactly 14 numeric cells.
+[x] My real PHP dashboard renders all 14 cells with nested loops and a readable desktop layout.
+[x] I ran my own PHP page and verified exact final values, 3/3/4/4 row lengths, and 14 cells with no PHP warnings.
+[x] I checked the two-column dashboard at 1280 x 800 or larger and captured my own page, not this demo.
+[x] My source, assets, screenshot(s), report, and run URL/instructions are in the final package.
+[x] I uploaded the package through the course channel and verified it is there.
+
+EXIT TICKET
+the outer foreach loops through each row in $matrix, and the inner foreach loops through only the cells that actually exist in that specific row, so rows with 3 items output 3 td cells and rows with 4 items output 4 td cells without undefined index errors. to add 11 to the third row i used $matrix[2][] = 11 which pushes onto the inner array at index 2, and $matrix[] = array(10, 11, 12, 13) pushes a new row array onto the outer array.
+
+FINAL OUTPUT TO VERIFY
+1 2 3
+4 5 10
+7 15 9 11
+10 11 12 13
+Rows: 4; row lengths: 3, 3, 4, 4; numeric cells: 14; optional maximum: 15.
