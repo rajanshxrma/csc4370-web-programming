@@ -1,0 +1,41 @@
+Inclass 09 Pizza Lab - live test run against CODD
+Mon, 26 Oct 2026 21:27 EDT  target: https://codd.cs.gsu.edu/~rsharma30/web/pizza-lab/order.php
+
+PASS    GET order.php directly -> 405 + explain POST  [HTTP 405]
+PASS    order.html loads (web/)  [HTTP 200]
+PASS    order.html loads (Web/, the lab's example path)  [HTTP 200]
+PASS    Alex, medium, 2, mushroom + olive -> ticket with both toppings  [HTTP 200]
+PASS      ... practice total $20 (2 x $10 medium)  [HTTP 200]
+PASS    no toppings + blank note -> Plain cheese  [HTTP 200]
+PASS      ... and No special requests  [HTTP 200]
+PASS      ... footer shows toppings key absent from the request  [HTTP 200]
+PASS    blank chef name (spaces only) -> rejected  [HTTP 422]
+PASS    missing chef name -> rejected  [HTTP 422]
+PASS    quantity 0 -> rejected  [HTTP 422]
+PASS    quantity 6 -> rejected  [HTTP 422]
+PASS    quantity 2.5 -> rejected  [HTTP 422]
+PASS    quantity missing -> rejected  [HTTP 422]
+PASS    quantity[] array (stretch test) -> rejected, no fatal  [HTTP 422]
+PASS    quantity 1 passes  [HTTP 200]
+PASS    quantity 5 passes  [HTTP 200]
+PASS    chef name <b>Alex</b> shown literally (escaped)  [HTTP 200]
+PASS      ... no raw <b> tag anywhere in the output
+PASS    topping unicorn (DevTools edit) -> rejected  [HTTP 422]
+PASS    valid topping + invented topping -> whole request rejected (critical thinking)  [HTTP 422]
+PASS    nested toppings[][] (stretch test) -> rejected, no fatal  [HTTP 422]
+PASS    toppings as a plain string -> rejected  [HTTP 422]
+PASS    duplicate olive -> listed once  [HTTP 200]
+PASS    all three toppings  [HTTP 200]
+PASS    size xl -> rejected  [HTTP 422]
+PASS    size missing -> rejected  [HTTP 422]
+PASS    crust stuffed (unknown) -> rejected  [HTTP 422]
+PASS    crust missing -> defaults to Thin  [HTTP 200]
+PASS    notes 201 bytes -> rejected  [HTTP 422]
+PASS    notes 200 bytes -> accepted  [HTTP 200]
+PASS    name 41 bytes -> rejected  [HTTP 422]
+PASS    name 40 bytes -> accepted  [HTTP 200]
+PASS    several bad fields -> every error listed (5 lines)  [HTTP 422]
+PASS      ... 5 error lines
+PASS    price field sent from the browser is ignored  [HTTP 200]
+
+W3C checker (validator.w3.org/nu): order.html, a ticket, a 422 page and the 405 page all 0 errors (see w3c-validation.txt).
