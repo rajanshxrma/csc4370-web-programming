@@ -1,0 +1,89 @@
+html {
+    background-color: #39275B;
+}
+
+body {
+    max-width: 600px;
+    width: 95%;
+    margin: 1em auto;
+    background-color: white;
+    border: 10px #D8C858 solid;
+    padding: 1em;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+hr {
+    width: 90%;
+    border: 1px solid #D8C858;
+}
+
+h1, h2 {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+dl {
+    margin: 1em 0;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 0.8em;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"], select {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.4em;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+fieldset {
+    margin-top: 0.6em;
+    border: 1px solid #ccc;
+    padding: 0.6em;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+legend {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 0.3em;
+}
+
+label {
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+input[type="submit"] {
+    font-size: 1.5em;
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.4em;
+    background-color: #f2f2f2;
+    border: 2px solid #D8C858;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #e5e5e5;
+    outline: 2px solid #39275B;
+}
+
+pre {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 0.8em;
+    overflow-x: auto;
+    font-size: 0.95em;
+}
