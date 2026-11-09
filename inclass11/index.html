@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Class Activity 11 - Intro to JavaScript - Rajan Sharma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 24px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #0039a6;
+            color: #ffffff;
+            padding: 18px 22px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0 0 6px 0;
+            font-size: 1.4rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 0.92rem;
+            opacity: 0.9;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #0039a6;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px 10px;
+            border: 1px solid #94a3b8;
+            border-radius: 4px;
+            width: 240px;
+            font-size: 0.95rem;
+            margin-right: 8px;
+        }
+        button {
+            background-color: #0039a6;
+            color: #ffffff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        button:hover {
+            background-color: #002875;
+        }
+        pre {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            padding: 12px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 0.88rem;
+            margin-top: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #0039a6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>In-Class Activity 11: Intro to JavaScript</h1>
+            <p>Rajan Sharma - CSC 4370 Web Programming (Open DevTools Console with F12 to view console.log output)</p>
+        </header>
+
+        <div class="card">
+            <h2>1. Loops &amp; Strings: drawTriangle(triangleSize)</h2>
+            <label for="triSize">Triangle Size:</label>
+            <input type="number" id="triSize" value="4" min="1" max="12">
+            <button type="button" onclick="runTriangleUI()">Run drawTriangle()</button>
+            <pre id="triOut"></pre>
+        </div>
+
+        <div class="card">
+            <h2>2. Password Validation: isStrongPassword(password)</h2>
+            <p>Rules: at least 8 characters, does not contain "password", and has at least one uppercase character (ASCII 65-90).</p>
+            <label for="pwInput">Test Password:</label>
+            <input type="text" id="pwInput" value="Qwerty123">
+            <button type="button" onclick="runPasswordUI()">Check Password</button>
+            <pre id="pwOut"></pre>
+        </div>
+
+        <div class="card">
+            <h2>3. Array Filtering &amp; Sorting: sortEvens(numArray)</h2>
+            <label for="arrInput">Comma-separated numbers:</label>
+            <input type="text" id="arrInput" value="4, 2, 9, 1, 8">
+            <button type="button" onclick="runEvensUI()">Run sortEvens()</button>
+            <pre id="evensOut"></pre>
+        </div>
+
+        <div class="card">
+            <h2>4. String Reverser &amp; Palindrome Checker</h2>
+            <label for="palInput">Test String:</label>
+            <input type="text" id="palInput" value="racecar">
+            <button type="button" onclick="runPalindromeUI()">Run Check</button>
+            <pre id="palOut"></pre>
+        </div>
+
+        <div class="card">
+            <h2>5. Module 14 Debug Challenge (Fixed Output)</h2>
+            <p>Fixed the 3 planted bugs: null-check order in <code>greetUser()</code>, <code>student.name</code> property access, and <code>scores.push(100)</code>.</p>
+            <pre id="debugOut"></pre>
+        </div>
+
+        <a class="back-link" href="../hw1/index.html">&larr; Back to Course Homepage</a>
+    </div>
+
+    <script src="exercises.js"></script>
+    <script>
+        function runTriangleUI() {
+            const size = parseInt(document.getElementById("triSize").value, 10) || 4;
+            let lines = [];
+            for (let i = 1; i <= size; i++) {
+                lines.push("*".repeat(i));
+            }
+            drawTriangle(size);
+            document.getElementById("triOut").textContent = lines.join("\n");
+        }
+
+        function runPasswordUI() {
+            const pw = document.getElementById("pwInput").value;
+            const res = isStrongPassword(pw);
+            document.getElementById("pwOut").textContent =
+                'isStrongPassword("' + pw + '") -> ' + res + "\n\n" +
+                'Sample Checks:\n' +
+                'isStrongPassword("Qwerty") -> ' + isStrongPassword("Qwerty") + "\n" +
+                'isStrongPassword("passwordQwerty") -> ' + isStrongPassword("passwordQwerty") + "\n" +
+                'isStrongPassword("qwerty123") -> ' + isStrongPassword("qwerty123") + "\n" +
+                'isStrongPassword("Qwerty123") -> ' + isStrongPassword("Qwerty123");
+        }
+
+        function runEvensUI() {
+            const raw = document.getElementById("arrInput").value;
+            const nums = raw.split(",").map(function(s) { return parseInt(s.trim(), 10); }).filter(function(n) { return !isNaN(n); });
+            const sorted = sortEvens(nums);
+            document.getElementById("evensOut").textContent =
+                "Input: [" + nums.join(", ") + "]\n" +
+                "Output: [" + sorted.join(", ") + "]";
+        }
+
+        function runPalindromeUI() {
+            const str = document.getElementById("palInput").value;
+            document.getElementById("palOut").textContent =
+                'reverseString("' + str + '") -> "' + reverseString(str) + '"\n' +
+                'isPalindrome("' + str + '") -> ' + isPalindrome(str);
+        }
+
+        function renderDebugSummary() {
+            document.getElementById("debugOut").textContent =
+                'greetUser() -> "' + greetUser() + '"\n' +
+                'greetUser("Rajan") -> "' + greetUser("Rajan") + '"\n' +
+                'student.name -> "' + student.name + '"\n' +
+                'scores -> [' + scores.join(", ") + ']';
+        }
+
+        runTriangleUI();
+        runPasswordUI();
+        runEvensUI();
+        runPalindromeUI();
+        renderDebugSummary();
+    </script>
+</body>
+</html>
