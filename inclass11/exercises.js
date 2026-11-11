@@ -76,28 +76,20 @@ console.log('isPalindrome("racecar"):', isPalindrome("racecar"));
 console.log('isPalindrome("Level"):', isPalindrome("Level"));
 console.log('isPalindrome("hello"):', isPalindrome("hello"));
 
-// Module 14 Debug Challenge (Fixed 3 Bugs)
-function greetUser(userName) {
-    // Bug 1 fix: check !userName before calling .toUpperCase()
-    if (!userName) {
-        return "Hello, Guest!";
-    }
-    const cleanName = userName.toUpperCase();
-    return "Welcome, " + cleanName;
+// Module 14 Debug Challenge (Fixed 3 Bugs from debug-challenge.js)
+function greetUser(name) {
+    // Bug 1 fix: was nme (ReferenceError), changed to name
+    console.log("Hello, " + name + "!");
 }
 
-const student = {
-    name: "Jordan",
-    major: "Computer Science"
-};
-
-const scores = [85, 90, 95];
-// Bug 3 fix: arrays use .push(), not .add()
-scores.push(100);
-
 console.log("\n--- Module 14: Debug Challenge Fixed ---");
-console.log("greetUser():", greetUser());
-console.log('greetUser("Rajan"):', greetUser("Rajan"));
-// Bug 2 fix: access student.name instead of student.fullName
-console.log("student.name:", student.name);
-console.log("scores after push(100):", scores);
+greetUser("Sam");
+
+let student = { name: "Ada", score: 92 };
+// Bug 2 fix: was student.nam (undefined), changed to student.name
+console.log(student.name);
+
+let scores = [85, 92, 78];
+// Bug 3 fix: was scores.pushh(90) (TypeError), changed to scores.push(90)
+scores.push(90);
+console.log("Scores: " + scores);

@@ -131,7 +131,7 @@
 
         <div class="card">
             <h2>5. Module 14 Debug Challenge (Fixed Output)</h2>
-            <p>Fixed the 3 planted bugs: null-check order in <code>greetUser()</code>, <code>student.name</code> property access, and <code>scores.push(100)</code>.</p>
+            <p>Fixed the 3 planted bugs in <code>debug-challenge.js</code>: <code>nme</code> &rarr; <code>name</code> in <code>greetUser()</code>, <code>student.nam</code> &rarr; <code>student.name</code>, and <code>scores.pushh(90)</code> &rarr; <code>scores.push(90)</code>.</p>
             <pre id="debugOut"></pre>
         </div>
 
@@ -180,10 +180,9 @@
 
         function renderDebugSummary() {
             document.getElementById("debugOut").textContent =
-                'greetUser() -> "' + greetUser() + '"\n' +
-                'greetUser("Rajan") -> "' + greetUser("Rajan") + '"\n' +
-                'student.name -> "' + student.name + '"\n' +
-                'scores -> [' + scores.join(", ") + ']';
+                'Hello, Sam!\n' +
+                'Ada\n' +
+                'Scores: 85,92,78,90';
         }
 
         runTriangleUI();
