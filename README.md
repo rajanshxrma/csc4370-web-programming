@@ -7,4 +7,5 @@ main coursework repository for csc 4370 at georgia state university (fall 2026).
 - `cw02/` intro to html portfolio
 - `cw03/` css foundations lab
 - `cw04/` php forms lab
-- `inc2/` through `inclass10/` in-class labs
+- `cw05/` js form validation lab
+- `inc2/` through `inclass11/` in-class labs
