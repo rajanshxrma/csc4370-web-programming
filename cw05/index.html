@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW-05 - JS Form Validation - Rajan Sharma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="form-card">
+            <form id="userForm" name="userForm" action="#" method="post" onsubmit="return validateForm();">
+                <div class="field-group">
+                    <div class="error-msg" id="idErr"></div>
+                    <div class="field-row">
+                        <label id="idLabel" for="userId">ID:</label>
+                        <input type="text" id="userId" name="userId">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="error-msg" id="fnameErr"></div>
+                    <div class="field-row">
+                        <label id="fnameLabel" for="firstName">FirstName:</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="error-msg" id="lnameErr"></div>
+                    <div class="field-row">
+                        <label id="lnameLabel" for="lastName">LastName:</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" id="addBtn">Add</button>
+                </div>
+            </form>
+
+            <div id="resultOutput" class="result-output"></div>
+        </div>
+
+        <p class="nav-back">
+            <a href="../hw1/index.html">&larr; Back to Course Homepage</a>
+        </p>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>

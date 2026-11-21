@@ -1,0 +1,106 @@
+/* CW-05: JS Form Validation - Rajan Sharma (CSC 4370) */
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    color: #111111;
+    margin: 0;
+    padding: 30px 20px;
+}
+
+.page-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    padding: 18px 22px;
+}
+
+.field-group {
+    margin-bottom: 10px;
+}
+
+.error-msg {
+    margin-left: 95px;
+    color: #d62828;
+    text-decoration: underline;
+    font-size: 15px;
+    min-height: 0;
+    margin-bottom: 3px;
+}
+
+.field-row {
+    display: flex;
+    align-items: center;
+}
+
+.field-row label {
+    width: 95px;
+    font-size: 16px;
+    color: #111111;
+}
+
+.field-row input[type="text"] {
+    width: 175px;
+    height: 24px;
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid #8a9ba8;
+    box-sizing: border-box;
+}
+
+.field-row input[type="text"].input-error {
+    border-color: #d62828;
+    background-color: #fff8f8;
+}
+
+.button-row {
+    margin-left: 95px;
+    margin-top: 6px;
+}
+
+#addBtn {
+    padding: 2px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border: 1px solid #6b7c8a;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e6ecf2 100%);
+    color: #111111;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: linear-gradient(to bottom, #f0f4f8 0%, #d9e2ec 100%);
+}
+
+.result-output {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.result-output div {
+    margin-bottom: 2px;
+}
+
+.nav-back {
+    margin-top: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.nav-back a {
+    color: #0039a6;
+    text-decoration: none;
+}
+
+.nav-back a:hover {
+    text-decoration: underline;
+}
